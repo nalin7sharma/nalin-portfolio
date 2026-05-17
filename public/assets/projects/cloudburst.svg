@@ -1,0 +1,18 @@
+<svg width="960" height="600" viewBox="0 0 960 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="600" fill="#020617"/>
+  <circle cx="220" cy="500" r="250" fill="#0891B2" opacity="0.2"/>
+  <circle cx="780" cy="126" r="250" fill="#2563EB" opacity="0.16"/>
+  <path d="M66 472c122-145 208-206 258-183 41 18 70 87 118 87 64 0 106-121 178-114 55 5 83 83 143 100 47 13 92-13 135-50v288H66V472Z" fill="#0F172A" stroke="#67E8F9" stroke-opacity="0.45"/>
+  <path d="M258 256c-25-40-9-96 35-115 35-16 76-3 96 27 34-10 72 3 92 33 24 35 18 82-14 110H301c-17 0-33-9-43-55Z" fill="#111827" stroke="#A78BFA" stroke-width="2"/>
+  <path d="M378 308l-32 64h58l-44 92" stroke="#67E8F9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g stroke="#67E8F9" stroke-opacity="0.68">
+    <path d="M628 226v166"/>
+    <path d="M574 392h108"/>
+    <circle cx="628" cy="202" r="25"/>
+    <path d="M590 202c-38-22-75-22-113 0"/>
+    <path d="M666 202c38-22 75-22 113 0"/>
+  </g>
+  <rect x="132" y="438" width="696" height="70" rx="8" fill="#020617" fill-opacity="0.76" stroke="#67E8F9" stroke-opacity="0.35"/>
+  <text x="168" y="483" fill="#E0F2FE" font-family="Inter, Arial" font-size="28" font-weight="700">Cloudburst Early Warning</text>
+  <text x="546" y="483" fill="#67E8F9" font-family="Inter, Arial" font-size="20">ConvLSTM - MQTT - Edge IoT</text>
+</svg>

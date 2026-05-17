@@ -1,0 +1,17 @@
+<svg width="960" height="600" viewBox="0 0 960 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="600" fill="#020617"/>
+  <circle cx="220" cy="180" r="210" fill="#7C3AED" opacity="0.2"/>
+  <circle cx="760" cy="440" r="260" fill="#06B6D4" opacity="0.17"/>
+  <g opacity="0.22">
+    <path d="M0 80h960M0 160h960M0 240h960M0 320h960M0 400h960M0 480h960M0 560h960" stroke="#67E8F9"/>
+    <path d="M80 0v600M160 0v600M240 0v600M320 0v600M400 0v600M480 0v600M560 0v600M640 0v600M720 0v600M800 0v600M880 0v600" stroke="#67E8F9"/>
+  </g>
+  <path d="M302 360c-30-48-28-116 8-159 31-37 82-53 128-39 43-35 111-21 137 27 43 1 82 35 87 79 6 53-35 100-88 101H352c-20 0-38-2-50-9Z" fill="#0F172A" stroke="#67E8F9" stroke-width="2"/>
+  <circle cx="376" cy="257" r="10" fill="#67E8F9"/>
+  <circle cx="478" cy="224" r="10" fill="#A78BFA"/>
+  <circle cx="558" cy="284" r="10" fill="#67E8F9"/>
+  <path d="M376 257l102-33 80 60M478 224l-8 85M376 257l94 52M470 309l88-25" stroke="#E0F2FE" stroke-opacity="0.65"/>
+  <rect x="132" y="438" width="696" height="70" rx="8" fill="#020617" fill-opacity="0.75" stroke="#A78BFA" stroke-opacity="0.35"/>
+  <text x="168" y="483" fill="#E0F2FE" font-family="Inter, Arial" font-size="28" font-weight="700">AetherMind</text>
+  <text x="398" y="483" fill="#67E8F9" font-family="Inter, Arial" font-size="20">Transformer NLP - Risk Detection - Secure AI</text>
+</svg>

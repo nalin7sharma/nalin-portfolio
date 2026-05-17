@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 222 42% 8%;
+  --foreground: 210 40% 98%;
+  --card: 222 28% 12%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222 28% 12%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 193 95% 48%;
+  --primary-foreground: 222 42% 8%;
+  --secondary: 222 24% 17%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 222 22% 16%;
+  --muted-foreground: 215 20% 75%;
+  --accent: 262 83% 58%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 222 24% 20%;
+  --input: 222 24% 20%;
+  --ring: 193 95% 48%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 225 45% 4%;
+  --foreground: 210 40% 98%;
+  --card: 225 35% 7%;
+  --card-foreground: 210 40% 98%;
+  --popover: 225 35% 7%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 190 100% 55%;
+  --primary-foreground: 225 45% 4%;
+  --secondary: 222 24% 13%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 222 22% 14%;
+  --muted-foreground: 215 20% 70%;
+  --accent: 266 95% 68%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62% 50%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 222 24% 16%;
+  --input: 222 24% 16%;
+  --ring: 190 100% 55%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(56, 189, 248, 0.16), transparent 25rem),
+    radial-gradient(circle at 85% 20%, rgba(168, 85, 247, 0.14), transparent 28rem),
+    radial-gradient(circle at 50% 80%, rgba(20, 184, 166, 0.12), transparent 32rem),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings:
+    "rlig" 1,
+    "calt" 1;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+  color: white;
+}
+
+@layer utilities {
+  .glass-panel {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.035));
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(24px);
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg, #e0f2fe, #67e8f9 34%, #a78bfa 68%, #f0abfc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .grid-background {
+    background-image:
+      linear-gradient(rgba(125, 211, 252, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(125, 211, 252, 0.08) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(circle at center, black, transparent 72%);
+  }
+
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.25'/%3E%3C/svg%3E");
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

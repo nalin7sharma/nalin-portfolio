@@ -1,0 +1,18 @@
+<svg width="960" height="600" viewBox="0 0 960 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="600" fill="#020617"/>
+  <circle cx="480" cy="300" r="360" fill="#0EA5E9" opacity="0.1"/>
+  <rect x="116" y="94" width="728" height="370" rx="8" fill="#0F172A" stroke="#67E8F9" stroke-opacity="0.4"/>
+  <rect x="192" y="158" width="206" height="148" rx="8" stroke="#67E8F9" stroke-width="4"/>
+  <rect x="538" y="188" width="220" height="190" rx="8" stroke="#A78BFA" stroke-width="4"/>
+  <rect x="414" y="250" width="124" height="90" rx="8" stroke="#34D399" stroke-width="4"/>
+  <text x="205" y="148" fill="#67E8F9" font-family="Inter, Arial" font-size="20" font-weight="700">person 0.94</text>
+  <text x="550" y="178" fill="#C4B5FD" font-family="Inter, Arial" font-size="20" font-weight="700">object 0.91</text>
+  <text x="426" y="240" fill="#A7F3D0" font-family="Inter, Arial" font-size="20" font-weight="700">class 0.90</text>
+  <g opacity="0.28">
+    <path d="M116 174h728M116 254h728M116 334h728M116 414h728" stroke="#67E8F9"/>
+    <path d="M196 94v370M276 94v370M356 94v370M436 94v370M516 94v370M596 94v370M676 94v370M756 94v370" stroke="#67E8F9"/>
+  </g>
+  <rect x="132" y="486" width="696" height="70" rx="8" fill="#020617" fill-opacity="0.82" stroke="#67E8F9" stroke-opacity="0.35"/>
+  <text x="168" y="531" fill="#E0F2FE" font-family="Inter, Arial" font-size="28" font-weight="700">YOLO Real-Time Object Detection</text>
+  <text x="614" y="531" fill="#67E8F9" font-family="Inter, Arial" font-size="20">OpenCV - NMS</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg width="960" height="600" viewBox="0 0 960 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="600" fill="#020617"/>
+  <circle cx="260" cy="190" r="260" fill="#A855F7" opacity="0.15"/>
+  <circle cx="720" cy="430" r="260" fill="#22D3EE" opacity="0.13"/>
+  <rect x="184" y="116" width="256" height="320" rx="8" fill="#0F172A" stroke="#67E8F9" stroke-opacity="0.45"/>
+  <rect x="520" y="116" width="256" height="320" rx="8" fill="#0F172A" stroke="#A78BFA" stroke-opacity="0.45"/>
+  <circle cx="312" cy="228" r="58" stroke="#67E8F9" stroke-width="3"/>
+  <path d="M218 388c16-76 47-114 94-114s78 38 94 114" stroke="#67E8F9" stroke-width="3"/>
+  <circle cx="648" cy="228" r="58" stroke="#A78BFA" stroke-width="3"/>
+  <path d="M554 388c16-76 47-114 94-114s78 38 94 114" stroke="#A78BFA" stroke-width="3"/>
+  <path d="M440 276h80" stroke="#E0F2FE" stroke-opacity="0.6"/>
+  <path d="M498 254l28 22-28 22" stroke="#E0F2FE" stroke-opacity="0.6"/>
+  <g opacity="0.48" stroke="#67E8F9">
+    <path d="M270 214h84M270 242h84M298 186v84M326 186v84"/>
+    <path d="M606 214h84M606 242h84M634 186v84M662 186v84"/>
+  </g>
+  <rect x="132" y="486" width="696" height="70" rx="8" fill="#020617" fill-opacity="0.82" stroke="#A78BFA" stroke-opacity="0.35"/>
+  <text x="168" y="531" fill="#E0F2FE" font-family="Inter, Arial" font-size="28" font-weight="700">Face Detection & Recognition</text>
+  <text x="574" y="531" fill="#C4B5FD" font-family="Inter, Arial" font-size="20">Embeddings - PostgreSQL</text>
+</svg>
