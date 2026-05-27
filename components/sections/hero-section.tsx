@@ -6,9 +6,13 @@ import { ArrowRight, Download, Mail, Rocket } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ParticleSphere } from "@/components/visuals/particle-sphere";
+import { HeroAvatar } from "@/components/visuals/hero-avatar";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 import { personal, rotatingTitles, stats } from "@/lib/portfolio-data";
+
+function isHttpLink(href: string) {
+  return href.startsWith("http://") || href.startsWith("https://");
+}
 
 export function HeroSection() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -37,7 +41,7 @@ export function HeroSection() {
       id="top"
       className="relative isolate flex min-h-screen items-center overflow-hidden pb-20 pt-28"
     >
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_30%,rgba(14,165,233,0.22),transparent_32rem),radial-gradient(circle_at_80%_15%,rgba(168,85,247,0.22),transparent_30rem),linear-gradient(180deg,rgba(2,6,23,0.2),rgba(2,6,23,1))]" />
+      <div className="hero-aurora absolute inset-0 -z-10 overflow-hidden" />
       <div className="absolute left-1/2 top-24 -z-10 h-[32rem] w-[32rem] -translate-x-1/2 rounded-md bg-cyan-400/[0.08] blur-3xl" />
 
       <div className="container grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
@@ -50,7 +54,7 @@ export function HeroSection() {
           <motion.div variants={fadeUp}>
             <Badge variant="outline" className="mb-5">
               <Rocket className="mr-2 size-3.5" />
-              AI products, ML systems, and product-minded engineering
+              AI Engineer & ML Developer
             </Badge>
           </motion.div>
 
@@ -98,9 +102,20 @@ export function HeroSection() {
             {personal.socials.map((social) => {
               const Icon = social.icon;
               return (
-                <Button key={social.label} asChild variant="ghost" size="sm">
-                  <a href={social.href} target="_blank" rel="noreferrer">
-                    <Icon />
+                <Button
+                  key={social.label}
+                  asChild
+                  variant="ghost"
+                  size="sm"
+                  className="group/social hover:-translate-y-1 hover:shadow-glow"
+                >
+                  <a
+                    href={social.href}
+                    {...(isHttpLink(social.href)
+                      ? { target: "_blank", rel: "noreferrer" }
+                      : {})}
+                  >
+                    <Icon className="transition-transform duration-300 group-hover/social:scale-110 group-hover/social:text-cyan-400 dark:group-hover/social:text-cyan-200" />
                     {social.label}
                   </a>
                 </Button>
@@ -124,24 +139,7 @@ export function HeroSection() {
           </motion.dl>
         </motion.div>
 
-        <motion.div
-          className="relative min-h-[34rem]"
-          initial={{ opacity: 0, scale: 0.94 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-        >
-          <div className="absolute inset-6 rounded-lg border border-cyan-300/20 bg-slate-950/30 shadow-glow" />
-          <div className="absolute inset-0 overflow-hidden rounded-lg">
-            <ParticleSphere />
-          </div>
-          <div className="absolute bottom-8 left-6 right-6 glass-panel rounded-lg p-5">
-            <p className="text-sm font-semibold text-cyan-100">Current focus</p>
-            <p className="mt-2 text-sm leading-6 text-muted-foreground">
-              Applied AI products with strong foundations in transformer NLP, medical image
-              analysis, secure pipelines, and edge-ready intelligent systems.
-            </p>
-          </div>
-        </motion.div>
+        <HeroAvatar />
       </div>
     </section>
   );

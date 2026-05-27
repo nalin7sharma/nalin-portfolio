@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ExternalLink, Github, Layers3, Radio } from "lucide-react";
@@ -8,6 +7,7 @@ import { ExternalLink, Github, Layers3, Radio } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { ProjectImage } from "@/components/site/project-image";
 import { SectionHeading } from "@/components/site/section-heading";
 import { fadeUp, scaleIn, staggerContainer } from "@/lib/animations";
 import { projectFilters, projects } from "@/lib/portfolio-data";
@@ -45,6 +45,7 @@ export function ProjectsSection() {
             <button
               key={filter}
               type="button"
+              suppressHydrationWarning
               onClick={() => setActiveFilter(filter)}
               className={cn(
                 "rounded-md border px-4 py-2 text-sm font-semibold transition-all",
@@ -79,12 +80,11 @@ export function ProjectsSection() {
               >
                 <Card className="group h-full overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/35 hover:shadow-glow">
                   <div className="relative aspect-[16/10] overflow-hidden border-b border-white/10">
-                    <Image
+                    <ProjectImage
                       src={project.image}
                       alt={`${project.title} visual system card`}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      title={project.title}
+                      priority={index < 2}
                     />
                     <div className="absolute left-4 top-4 flex gap-2">
                       {project.featured ? <Badge variant="violet">Featured</Badge> : null}
@@ -103,15 +103,26 @@ export function ProjectsSection() {
                           {project.summary}
                         </p>
                       </div>
-                      <div className="flex shrink-0 gap-2">
-                        <Button asChild variant="outline" size="icon">
-                          <a href={project.github} target="_blank" rel="noreferrer" aria-label={`${project.title} GitHub`}>
+                      <div className="flex shrink-0 flex-wrap gap-2">
+                        <Button asChild variant="outline" size="sm">
+                          <a href={project.github} target="_blank" rel="noreferrer">
                             <Github />
+                            GitHub
                           </a>
                         </Button>
-                        <Button variant="ghost" size="icon" disabled aria-label={`${project.title} live demo`}>
-                          <ExternalLink />
-                        </Button>
+                        {project.live ? (
+                          <Button asChild variant="glow" size="sm">
+                            <a href={project.live} target="_blank" rel="noreferrer">
+                              <ExternalLink />
+                              Demo
+                            </a>
+                          </Button>
+                        ) : (
+                          <Button variant="ghost" size="sm" disabled suppressHydrationWarning>
+                            <ExternalLink />
+                            Demo soon
+                          </Button>
+                        )}
                       </div>
                     </div>
 

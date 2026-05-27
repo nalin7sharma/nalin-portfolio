@@ -4,18 +4,26 @@ import Script from "next/script";
 import "./globals.css";
 import { personal } from "@/lib/portfolio-data";
 
-const title = "Nalin Sharma | AI/ML Engineer Portfolio";
+const title = "Nalin Sharma | AI Engineer & ML Systems Developer";
 const description =
-  "Recruiter-ready portfolio for Nalin Sharma, an AI/ML Engineer and B.Tech CSE-AI student building NLP, computer vision, IoT, and secure AI product systems.";
+  "Portfolio for Nalin Sharma, an AI Engineer and ML Systems Developer building NLP, computer vision, healthcare AI, IoT, and secure AI product systems.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nalinsharma.co.in"),
   title,
   description,
+  formatDetection: {
+    telephone: false,
+    date: false,
+    email: false,
+    address: false,
+  },
   applicationName: "Nalin Sharma Portfolio",
   keywords: [
     "Nalin Sharma",
     "AI ML Engineer",
+    "ML Systems Developer",
+    "AI Engineer",
     "Computer Science AI",
     "NLP Engineer",
     "Computer Vision Developer",
@@ -57,7 +65,10 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#020617",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
+    { media: "(prefers-color-scheme: dark)", color: "#020617" },
+  ],
   colorScheme: "dark light",
 };
 
@@ -65,7 +76,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: personal.name,
-  jobTitle: "AI/ML Engineer",
+  jobTitle: "AI Engineer and ML Systems Developer",
   url: personal.website,
   email: personal.email,
   address: {
@@ -94,7 +105,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className="font-sans antialiased">
+      <body
+        className="font-sans antialiased"
+        suppressHydrationWarning
+        data-gramm="false"
+        data-gramm_editor="false"
+        data-enable-grammarly="false"
+      >
         {children}
         <Script
           id="person-json-ld"

@@ -26,8 +26,10 @@ export function SectionHeading({
       whileInView="visible"
       viewport={{ once: true, margin: "-120px" }}
     >
-      <p className="mb-3 text-sm font-semibold uppercase text-cyan-200">{eyebrow}</p>
-      <h2 className="text-3xl font-semibold text-white sm:text-4xl md:text-5xl">{title}</h2>
+      <p className="mb-3 text-sm font-semibold uppercase text-cyan-600 dark:text-cyan-200">
+        {eyebrow}
+      </p>
+      <h2 className="text-3xl font-semibold text-foreground sm:text-4xl md:text-5xl">{title}</h2>
       {description ? (
         <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg">{description}</p>
       ) : null}

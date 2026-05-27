@@ -14,13 +14,13 @@ const buttonVariants = cva(
         secondary:
           "bg-secondary text-secondary-foreground hover:-translate-y-0.5 hover:bg-secondary/80",
         ghost:
-          "text-muted-foreground hover:bg-white/[0.08] hover:text-foreground dark:hover:bg-white/[0.08]",
+          "text-muted-foreground hover:bg-slate-900/[0.06] hover:text-foreground dark:hover:bg-white/[0.08]",
         outline:
-          "border border-white/[0.12] bg-white/5 text-foreground hover:-translate-y-0.5 hover:border-cyan-300/45 hover:bg-white/10",
+          "border border-slate-900/10 bg-white/[0.65] text-foreground shadow-sm hover:-translate-y-0.5 hover:border-cyan-500/35 hover:bg-white/90 dark:border-white/[0.12] dark:bg-white/5 dark:hover:border-cyan-300/45 dark:hover:bg-white/10",
         glow:
-          "border border-cyan-300/30 bg-cyan-300/10 text-cyan-100 shadow-glow hover:-translate-y-0.5 hover:border-cyan-200/70 hover:bg-cyan-300/[0.18]",
+          "border border-cyan-500/30 bg-cyan-500/10 text-cyan-700 shadow-glow hover:-translate-y-0.5 hover:border-cyan-500/55 hover:bg-cyan-500/[0.16] dark:border-cyan-300/30 dark:bg-cyan-300/10 dark:text-cyan-100 dark:hover:border-cyan-200/70 dark:hover:bg-cyan-300/[0.18]",
         violet:
-          "border border-violet-300/30 bg-violet-300/10 text-violet-100 shadow-purple-glow hover:-translate-y-0.5 hover:border-violet-200/70 hover:bg-violet-300/[0.18]",
+          "border border-violet-500/30 bg-violet-500/10 text-violet-700 shadow-purple-glow hover:-translate-y-0.5 hover:border-violet-500/55 hover:bg-violet-500/[0.16] dark:border-violet-300/30 dark:bg-violet-300/10 dark:text-violet-100 dark:hover:border-violet-200/70 dark:hover:bg-violet-300/[0.18]",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -43,12 +43,23 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  (
+    {
+      className,
+      variant,
+      size,
+      asChild = false,
+      suppressHydrationWarning = true,
+      ...props
+    },
+    ref,
+  ) => {
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
+        suppressHydrationWarning={suppressHydrationWarning}
         {...props}
       />
     );

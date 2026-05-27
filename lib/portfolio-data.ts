@@ -167,6 +167,29 @@ export const skillCategories = [
   },
 ];
 
+export const skillChipGroups = [
+  {
+    title: "AI/ML",
+    chips: ["TensorFlow", "PyTorch", "Scikit-learn", "Hugging Face", "OpenCV", "YOLO"],
+    accent: "from-cyan-400 to-violet-400",
+  },
+  {
+    title: "Backend",
+    chips: ["Python", "PostgreSQL", "MongoDB", "JWT", "RBAC", "Docker"],
+    accent: "from-emerald-300 to-cyan-400",
+  },
+  {
+    title: "Frontend",
+    chips: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    accent: "from-sky-400 to-blue-500",
+  },
+  {
+    title: "Tools",
+    chips: ["Git", "GitHub", "Selenium", "Scrapy", "Grafana", "Prometheus"],
+    accent: "from-violet-400 to-fuchsia-400",
+  },
+];
+
 export const experience = [
   {
     role: "AI/ML Intern",
@@ -265,7 +288,7 @@ export const projects = [
   {
     title: "Face Detection & Recognition System",
     category: "Computer Vision",
-    image: "/assets/projects/face-recognition.svg",
+    image: "/assets/projects/face-detection-recognition.svg",
     github: "https://github.com/nalin7sharma/AI-Based-Face-Detection-and-Recognition-System",
     live: "",
     featured: false,
@@ -315,7 +338,6 @@ export const education = [
     meta: "Prashant Vihar, Rohini, Delhi",
     period: "2023",
     location: "Delhi, India",
-    score: "72%",
     icon: BookOpen,
   },
   {
@@ -324,7 +346,6 @@ export const education = [
     meta: "Prashant Vihar, Rohini, Delhi",
     period: "2021",
     location: "Delhi, India",
-    score: "87%",
     icon: Trophy,
   },
 ];

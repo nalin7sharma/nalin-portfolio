@@ -52,9 +52,11 @@ export function EducationSection() {
                         </p>
                       </div>
                     </div>
-                    <p className="mt-5 inline-flex rounded-md border border-cyan-300/20 bg-cyan-300/10 px-3 py-2 text-sm font-semibold text-cyan-100">
-                      {item.score}
-                    </p>
+                    {item.score ? (
+                      <p className="mt-5 inline-flex rounded-md border border-cyan-300/20 bg-cyan-300/10 px-3 py-2 text-sm font-semibold text-cyan-100">
+                        {item.score}
+                      </p>
+                    ) : null}
                   </CardContent>
                 </Card>
               </motion.div>

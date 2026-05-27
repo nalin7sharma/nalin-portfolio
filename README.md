@@ -70,6 +70,14 @@ No custom environment variables are required for the current static portfolio.
 
 This project is configured for static export with `output: "export"` in `next.config.ts`.
 
+The contact form posts to `public/api/contact.php`, which is copied into the exported
+`out/api/contact.php` file for cPanel. It uses PHP `mail()` to send messages to
+`2005nalinsharma@gmail.com`.
+
+Before deploying, confirm PHP mail is enabled on your cPanel hosting account. If your host
+disables PHP mail, set `NEXT_PUBLIC_CONTACT_ENDPOINT` in `.env.local` to a Formspree,
+EmailJS proxy, or another form-provider endpoint before building.
+
 Build the site:
 
 ```bash

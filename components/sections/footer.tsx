@@ -6,9 +6,13 @@ import { ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { navLinks, personal } from "@/lib/portfolio-data";
 
-export function Footer() {
-  const year = new Date().getFullYear();
+const COPYRIGHT_YEAR = 2026;
 
+function isHttpLink(href: string) {
+  return href.startsWith("http://") || href.startsWith("https://");
+}
+
+export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-slate-950/80 py-10">
       <div className="container flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
@@ -42,7 +46,13 @@ export function Footer() {
             const Icon = social.icon;
             return (
               <Button key={social.label} asChild variant="outline" size="icon">
-                <a href={social.href} target="_blank" rel="noreferrer" aria-label={social.label}>
+                <a
+                  href={social.href}
+                  {...(isHttpLink(social.href)
+                    ? { target: "_blank", rel: "noreferrer" }
+                    : {})}
+                  aria-label={social.label}
+                >
                   <Icon />
                 </a>
               </Button>
@@ -56,7 +66,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container mt-8 border-t border-white/10 pt-6 text-sm text-muted-foreground">
-        Copyright {year} Nalin Sharma. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
+        Copyright {COPYRIGHT_YEAR} Nalin Sharma. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
       </div>
     </footer>
   );

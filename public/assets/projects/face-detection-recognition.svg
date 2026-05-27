@@ -1,0 +1,52 @@
+<svg width="960" height="600" viewBox="0 0 960 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="600" fill="#020617"/>
+  <circle cx="238" cy="168" r="250" fill="#7C3AED" opacity="0.14"/>
+  <circle cx="748" cy="430" r="270" fill="#06B6D4" opacity="0.13"/>
+  <g opacity="0.2" stroke="#67E8F9">
+    <path d="M0 72h960M0 144h960M0 216h960M0 288h960M0 360h960M0 432h960M0 504h960M0 576h960"/>
+    <path d="M72 0v600M144 0v600M216 0v600M288 0v600M360 0v600M432 0v600M504 0v600M576 0v600M648 0v600M720 0v600M792 0v600M864 0v600M936 0v600"/>
+  </g>
+  <rect x="82" y="70" width="796" height="390" rx="8" fill="#06111F" fill-opacity="0.84" stroke="#67E8F9" stroke-opacity="0.36"/>
+  <rect x="116" y="104" width="462" height="322" rx="8" fill="#020617" stroke="#0EA5E9" stroke-opacity="0.38"/>
+  <rect x="154" y="128" width="346" height="270" rx="8" stroke="#67E8F9" stroke-width="3"/>
+  <path d="M327 160c-78 0-137 62-137 143 0 78 57 139 137 139s137-61 137-139c0-81-59-143-137-143Z" fill="#0F172A" stroke="#A78BFA" stroke-width="2"/>
+  <path d="M243 286c11-51 40-81 84-81s73 30 84 81" stroke="#67E8F9" stroke-opacity="0.58" stroke-width="2"/>
+  <path d="M242 338c26 42 54 63 85 63s59-21 85-63" stroke="#67E8F9" stroke-opacity="0.58" stroke-width="2"/>
+  <circle cx="279" cy="292" r="9" fill="#67E8F9"/>
+  <circle cx="375" cy="292" r="9" fill="#67E8F9"/>
+  <circle cx="327" cy="326" r="8" fill="#A78BFA"/>
+  <circle cx="292" cy="356" r="6" fill="#C4B5FD"/>
+  <circle cx="362" cy="356" r="6" fill="#C4B5FD"/>
+  <path d="M279 292l48 34 48-34M327 326l-35 30h70M279 292l-37-6M375 292l37-6" stroke="#E0F2FE" stroke-opacity="0.65"/>
+  <rect x="173" y="140" width="132" height="34" rx="6" fill="#020617" stroke="#67E8F9" stroke-opacity="0.5"/>
+  <text x="190" y="162" fill="#67E8F9" font-family="Inter, Arial" font-size="16" font-weight="700">FACE 0.97</text>
+  <rect x="366" y="140" width="112" height="34" rx="6" fill="#020617" stroke="#A78BFA" stroke-opacity="0.5"/>
+  <text x="382" y="162" fill="#C4B5FD" font-family="Inter, Arial" font-size="16" font-weight="700">ID MATCH</text>
+  <path d="M154 204h346M154 270h346M154 336h346M220 128v270M286 128v270M352 128v270M418 128v270" stroke="#67E8F9" stroke-opacity="0.13"/>
+  <rect x="618" y="104" width="224" height="322" rx="8" fill="#020617" stroke="#A78BFA" stroke-opacity="0.34"/>
+  <text x="644" y="142" fill="#E0F2FE" font-family="Inter, Arial" font-size="20" font-weight="700">RECOGNITION HUD</text>
+  <text x="644" y="174" fill="#67E8F9" font-family="Inter, Arial" font-size="15">Embedding similarity</text>
+  <rect x="644" y="198" width="160" height="8" rx="4" fill="#1E293B"/>
+  <rect x="644" y="198" width="139" height="8" rx="4" fill="#67E8F9"/>
+  <text x="812" y="207" fill="#E0F2FE" font-family="Inter, Arial" font-size="13">0.87</text>
+  <text x="644" y="246" fill="#C4B5FD" font-family="Inter, Arial" font-size="15">Vector store: PostgreSQL</text>
+  <g stroke="#67E8F9" stroke-opacity="0.55">
+    <path d="M650 282h34l18 30 28-74 26 44h62"/>
+    <path d="M650 332h26l16-20 22 38 26-54 32 36h46"/>
+  </g>
+  <g fill="#67E8F9">
+    <circle cx="650" cy="282" r="4"/>
+    <circle cx="684" cy="282" r="4"/>
+    <circle cx="702" cy="312" r="4"/>
+    <circle cx="730" cy="238" r="4"/>
+    <circle cx="756" cy="282" r="4"/>
+    <circle cx="818" cy="282" r="4"/>
+  </g>
+  <rect x="644" y="374" width="174" height="28" rx="6" fill="#67E8F9" fill-opacity="0.12" stroke="#67E8F9" stroke-opacity="0.35"/>
+  <text x="662" y="394" fill="#CFFAFE" font-family="Inter, Arial" font-size="14" font-weight="700">REAL-TIME VERIFIED</text>
+  <path d="M500 260h118" stroke="#67E8F9" stroke-opacity="0.4"/>
+  <path d="M602 242l24 18-24 18" stroke="#67E8F9" stroke-opacity="0.4"/>
+  <rect x="132" y="486" width="696" height="70" rx="8" fill="#020617" fill-opacity="0.84" stroke="#A78BFA" stroke-opacity="0.38"/>
+  <text x="168" y="531" fill="#E0F2FE" font-family="Inter, Arial" font-size="28" font-weight="700">Face Detection &amp; Recognition</text>
+  <text x="574" y="531" fill="#C4B5FD" font-family="Inter, Arial" font-size="20">Landmarks - Embeddings - Identity</text>
+</svg>

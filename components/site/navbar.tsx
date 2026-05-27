@@ -24,7 +24,9 @@ export function Navbar() {
     <header
       className={cn(
         "fixed left-0 right-0 top-0 z-50 transition-all duration-300",
-        scrolled ? "border-b border-white/10 bg-slate-950/[0.72] backdrop-blur-xl" : "bg-transparent",
+        scrolled
+          ? "border-b border-border/70 bg-background/75 shadow-sm shadow-slate-900/5 backdrop-blur-xl"
+          : "bg-transparent",
       )}
     >
       <nav className="container flex h-16 items-center justify-between">
@@ -32,7 +34,7 @@ export function Navbar() {
           <span className="flex size-9 items-center justify-center rounded-md border border-cyan-300/35 bg-cyan-300/10 text-sm font-bold text-cyan-100 shadow-glow">
             NS
           </span>
-          <span className="hidden text-sm font-semibold text-white sm:block">Nalin Sharma</span>
+          <span className="hidden text-sm font-semibold text-foreground sm:block">Nalin Sharma</span>
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">
@@ -40,7 +42,7 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-white/[0.06] hover:text-white"
+              className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-slate-900/[0.06] hover:text-foreground dark:hover:bg-white/[0.06] dark:hover:text-white"
             >
               {link.label}
             </Link>
@@ -59,7 +61,8 @@ export function Navbar() {
 
         <button
           type="button"
-          className="inline-flex size-10 items-center justify-center rounded-md border border-white/10 bg-white/[0.04] text-white lg:hidden"
+          suppressHydrationWarning
+          className="inline-flex size-10 items-center justify-center rounded-md border border-border/70 bg-background/70 text-foreground backdrop-blur-xl lg:hidden"
           aria-label="Open menu"
           onClick={() => setIsOpen((value) => !value)}
         >
@@ -68,13 +71,13 @@ export function Navbar() {
       </nav>
 
       {isOpen ? (
-        <div className="border-t border-white/10 bg-slate-950/[0.96] px-4 py-4 backdrop-blur-xl lg:hidden">
+        <div className="border-t border-border/70 bg-background/95 px-4 py-4 backdrop-blur-xl lg:hidden">
           <div className="mx-auto grid max-w-md gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-md px-3 py-3 text-sm text-muted-foreground hover:bg-white/[0.06] hover:text-white"
+                className="rounded-md px-3 py-3 text-sm text-muted-foreground hover:bg-slate-900/[0.06] hover:text-foreground dark:hover:bg-white/[0.06] dark:hover:text-white"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

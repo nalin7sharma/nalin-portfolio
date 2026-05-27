@@ -32,12 +32,13 @@ export function AboutSection() {
             <div className="relative overflow-hidden rounded-lg border border-white/10 bg-slate-950/70 p-4">
               <div className="relative aspect-[4/5] overflow-hidden rounded-md border border-cyan-300/20 bg-gradient-to-br from-slate-900 via-slate-950 to-cyan-950/45">
                 <Image
-                  src="/assets/profile-placeholder.svg"
-                  alt="Futuristic profile placeholder for Nalin Sharma"
+                  src="/assets/avatar/about-pfp.webp"
+                  alt="Nalin Sharma profile picture"
                   fill
-                  priority
-                  className="object-cover"
+                  sizes="(max-width: 1024px) 92vw, 420px"
+                  className="object-cover object-center"
                 />
+                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(2,6,23,0.38))]" />
               </div>
               <div className="mt-4 flex items-center justify-between gap-3">
                 <div>
